@@ -1,0 +1,56 @@
+/*
+||||||||||||||||||||||||||
+|| Paramètres de projet ||
+||||||||||||||||||||||||||
+*/
+body{
+    margin: var(--prc0_auto);
+    padding: var(--prc0_auto);
+    min-height: var(--vh100);
+}
+
+header,footer{
+    align-items: var(--center);
+    height: 5vh;
+}
+
+content{
+    flex-grow: var(--grow);
+}
+
+a{
+    text-decoration: var(--none);
+}
+
+button{
+    border: var(--none);
+}
+/*------------------------------------------------------------------------------------*/
+/* Gestion du menu burger */
+.isOpen{
+    display: var(--none);
+}
+
+.open-close{
+    display: var(--none);
+}
+
+.modal{
+    display: var(--flex);
+}
+
+*{font-family: 'Roboto', sans-serif;};
+
+@media (max-width: 600px) {
+    .modal{
+        display: var(--none);
+    }
+
+    .open-close{
+        display: var(--flex);
+    }
+
+    a{
+       margin-left: 0%; 
+    }
+}

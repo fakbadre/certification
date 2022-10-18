@@ -1,0 +1,81 @@
+cahier de charges:Création d'un Site d'agence de voyage :Emméne moi 
+
+Présentation de l’ensemble du projet
+
+-Présentation de l’activité de l’entreprise : société specialiste dans les voyages à Marrakech.
+
+-Quel est le rôle du projet web dans la stratégie de l’entreprise:rendre la société visible et prendre des parts de marché dans cette niche de voyage de proximité(à deux heures et demi de paris),
+dépaysant et riche culturellement.
+
+-Quels sont les objectifs du site :il s'agit d’un site e-commerce destiné à vendre des voyages sur mesure selon les categories des utilisateurs(une clientéle ciblée).
+Une application en ligne..
+
+-Quelle est la cible adressée par le site : 3 categories:
+.séjour en famille
+.Séjour romantique
+.Séjour de luxe
+
+-quel est l’objectif en termes de volume de ventes ? une centaine de client par mois.
+
+-Quel volume mensuel de prospects le client espère-t-il collecter par les formulaires
+disponibles dans le site ? un millier.
+
+- Périmètre du projet :
+.Le site doit être multilingue:Francais et Anglais.
+.Le site soit etre adapté pour les supports mobiles (responsive,design) 
+
+ Description de l’existant :
+.Nom de domaine.
+.Hebergement.
+.Produits disponibles(types de séjours).
+.les ressources disponibles (logos, éléments graphiques, textes, photos...)
+
+Description graphique et ergonomique:
+. Charte graphique :
+ -couleur du site:blanc,bleu,noir 
+ .Quelle sera la couleur dominante ? (bleu)
+ .Variation du code couleur selon les sections ou les pages du site 
+ .Des éléments visuels à réutiliser :Photos
+ .police souhaite:Roboto
+ Design:flat design
+
+Description fonctionnelle et technique:
+-Arborescence du site :
+.les grandes sections du site 
+.Organisation des différentes rubriques:Types de sejours
+.les pages principales:Accueil,se connécter,s'enrégistrer,les produits,le panier,se déconnecter.
+
+ Description fonctionnelle :
+.Le site comprend une boutique en ligne,les modes de livraison(mail) et de paiement envisagés(carte bancaire), factures ...
+.un espace client sécurisé par mot de passe :connection et enrégistrement.
+.un back office de suivi d’activité (administrateur).
+.Le site doit intégrer Un blog ,Un module d’inscription
+
+ Informations relatives aux contenus :
+.les différents types de contenus présentés sur le site :articles, images, suggestions,informations ...
+.les besoins en termes de modification des contenus et création de pages:les hebergeurs(en cas de    changement)...; 
+.le code HTML respecte les standards SEO notamment en matière de balises titres et de meta-informations 
+
+ Contraintes techniques :
+.Quelles sont les éventuelles technologies imposées ou privilégiées : langages,frameworks
+.le site doit être compatible avec tous les navigateurs
+.prise en charge de l’hébergement 
+.intégrations à des systèmes tiers à prévoir : réseaux sociaux,comptabilité, facturation, 
+emailing, marketing automatique,... 
+
+Prestations attendues
+. Prestations attendues :
+la liste de toutes les prestations que je dois  réaliser :
+ Développement
+ Design
+ Intégration
+ Migration de base de données 
+ Achat du nom de domaine et gestion de l’hébergement
+ Maintenance et mises à jour
+ Formation à la gestion du site
+ Accompagnement marketing : plan marketing, SEO, SEA, webanalyse, ...)
+ ...
+besoin du client 
+
+
+ 

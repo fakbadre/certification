@@ -1,0 +1,48 @@
+{% extends 'base.twig' %}
+
+{# Content #}
+{% block content %}
+<table class="w100 col">
+  <thead>
+    <tr class="space_1 w100">
+      <th class="b txt_size30 txt_center w20">#ID</th>
+      <th class="b txt_size30 txt_center w20">Contrat</th>
+      <th class="b txt_size30 txt_center w20">Images</th>
+      <th class="b txt_size30 txt_center w20">Montant</th>
+      <th class="b txt_size30 txt_center w20">Action</th>
+    </tr>
+  </thead>
+  <tbody class="col">
+  {% for c in content %}
+    <tr class="space_1 w100 align_center mrg2_t">
+      <th class="w20 txt_center txt_size25">{{ c.panier_id }}</th>
+      <td class="w20 txt_center txt_size25">{{ c.titre }}</td>
+      <td class="w20 txt_center txt_size25"><img src="{{ dir }}public/assets/img/photos/{{ c.img }}"></td>
+      <td class="w20 txt_center txt_size25">{{ c.montant }}€</td>
+      <td class="w20 txt_center txt_size25">
+        <form method="POST" action="panier/{{ c.panier_id }}">
+            <button><img class="w100 back_white" src="{{ dir }}public/assets/img/photos/svg/poubelle_vide.svg"></button>
+        </form>
+      </td>
+    </tr>
+  {% endfor %}
+  </tbody>
+</table>
+
+<div class="center w100 mrg3_t">
+  <div class="center w25 col">
+    <p class="txt_size25 txt_center">Total à payer: {{ total }}€</p>
+    <div class="center">
+      <button class="txt_bold txt_size25 w25 pad3_t pad3_l pad3_r pad3_b mrg5_b back_blue txt_white btn_1">PAYER</button>
+    </div>
+  </div>
+</div>
+{% endblock %}
+
+{% block header %}{% include 'components/header/navbar_connecter.twig' %}{% endblock %}
+
+{% block burger %}{% include 'components/burger/navbar_connecter_accueil.twig' %}{% endblock %}
+
+{% block h1 %}{% include 'components/titres/h1_home.twig' %}{% endblock %}
+
+{% block footer %}{% include 'components/footer/footer_home.twig' %}{% endblock %}

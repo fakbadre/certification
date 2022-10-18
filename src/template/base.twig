@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="{{ dir }}public/assets/img/svg/krono_ico.ico">
+    <title>{% block title %}Kronos{% endblock %}</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+</head>
+<body class="col">
+    {# Header page #}
+    {% block header %}
+    {% endblock %} 
+
+    {% block burger %}
+    {% endblock %} 
+
+    {# Content page #}
+    <content> 
+    {% block h1 %}{% endblock %}
+    {% block content %}{% endblock %} 
+    {% block form %}{% endblock %} 
+    </content>
+
+    {# Footer page #}
+    {% block footer %}
+    {% endblock %} 
+</body>
+</html>

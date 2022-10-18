@@ -1,0 +1,130 @@
+# Suit les liens symboliques
+Options +FollowSymlinks 
+
+# BlackList dir
+Options -Indexes 
+
+# Mets l'encodage par défault pour fichiers text et html
+AddDefaultCharset UTF-8
+
+# Masque les infos du serveur
+ServerSignature Off
+
+# Déclaration de la réecriture de URL
+RewriteEngine on
+
+# Redirection vers notre rooter
+RewriteCond %{REQUEST_FILENAME} !-f 
+RewriteCond %{REQUEST_FILENAME} !-d
+
+# Protection des fichiers .htaccess et .htpasswds
+<Files ~ "^.*\.([Hh][Tt][AaPp])">
+    order allow,deny
+    deny from all
+    satisfy all
+</Files>
+
+# Fichiers BlackList
+<FilesMatch "^(?!index\.php$).+\.php$">
+Order deny,allow
+Deny from all
+</FilesMatch>
+
+<FilesMatch "^(?!index\.php$).+\.json$">
+Order deny,allow
+Deny from all
+</FilesMatch>
+
+<FilesMatch "^(?!index\.php$).+\.lock$">
+Order deny,allow
+Deny from all
+</FilesMatch>
+
+<FilesMatch "^(?!index\.php$).+\.md$">
+Order deny,allow
+Deny from all
+</FilesMatch>
+
+<FilesMatch "^(?!index\.php$).+\.twig$">
+Order deny,allow
+Deny from all
+</FilesMatch>
+
+<FilesMatch "^(?!index\.php$).+\.map$">
+Order deny,allow
+Deny from all
+</FilesMatch>
+
+# <FilesMatch "^(?!index\.php$).+\.js$">
+# Order deny,allow
+# Deny from all
+# </FilesMatch>
+
+# <FilesMatch "^(?!index\.php$).+\.ico$">
+# Order deny,allow
+# Deny from all
+# </FilesMatch>
+
+# <FilesMatch "^(?!index\.php$).+\.png$">
+# Order deny,allow
+# Deny from all
+# </FilesMatch>
+
+# <FilesMatch "^(?!index\.php$).+\.jpeg$">
+# Order deny,allow
+# Deny from all
+# </FilesMatch>
+
+# <FilesMatch "^(?!index\.php$).+\.svg$">
+# Order deny,allow
+# Deny from all
+# </FilesMatch>
+
+# <FilesMatch "^(?!index\.php$).+\.webp$">
+# Order deny,allow
+# Deny from all
+# </FilesMatch>
+
+<FilesMatch "^(?!index\.php$).+\.bmp$">
+Order deny,allow
+Deny from all
+</FilesMatch>
+
+<FilesMatch "^(?!index\.php$).+\.py$">
+Order deny,allow
+Deny from all
+</FilesMatch>
+
+
+<FilesMatch "^(?!index\.php$).+\.asp$">
+Order deny,allow
+Deny from all
+</FilesMatch>
+
+# Protections diverses (XSS, clickjacking et MIME-Type sniffing) 
+<ifModule mod_headers.c>
+Header set X-XSS-Protection "1; mode=block"
+Header always append X-Frame-Options SAMEORIGIN
+Header set X-Content-Type-Options: "nosniff”
+</ifModule>
+
+# Interdiction d'extentions
+RewriteCond %{REQUEST_URI} !\.js$
+RewriteCond %{REQUEST_URI} !\.ico$
+RewriteCond %{REQUEST_URI} !\.png$
+RewriteCond %{REQUEST_URI} !\.jpeg$
+RewriteCond %{REQUEST_URI} !\.svg$
+RewriteCond %{REQUEST_URI} !\.php$
+RewriteCond %{REQUEST_URI} !\.map$
+RewriteCond %{REQUEST_URI} !\.bmp$
+RewriteCond %{REQUEST_URI} !\.py$
+RewriteCond %{REQUEST_URI} !\.htaccess$
+RewriteCond %{REQUEST_URI} !\.json$
+RewriteCond %{REQUEST_URI} !\.twig$
+RewriteCond %{REQUEST_URI} !\.md$
+RewriteCond %{REQUEST_URI} !\.gitignore$
+RewriteCond %{REQUEST_URI} !\.webp$
+RewriteCond %{REQUEST_URI} !\.asp$
+
+# Renvoie de toutes les requêtes vers index.php
+RewriteRule ^(.*)$ index.php?url=$1 [NC,L]

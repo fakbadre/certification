@@ -1,0 +1,58 @@
+/*
+|||||||||||||||||||||||||
+|| Espacements de divs ||
+|||||||||||||||||||||||||
+*/
+.space_1{
+    display: var(--flex);
+    justify-content: var(--space_1);
+}
+
+.space_2{
+    display: var(--flex);
+    justify-content: var(--space_2);
+}
+
+.col{
+    display: var(--flex);
+    flex-direction: var(--col);
+}
+
+.f_wrap{
+    display: var(--flex);
+    flex-wrap: var(--wrap);
+}
+
+.center{
+    display: var(--flex);
+    justify-content: var(--center);
+}
+
+.end{
+    display: var(--flex);
+    justify-content: var(--end);
+}
+
+.float_r{
+    float: var(--float_r);
+}
+
+.float_l{
+    float: var(--float_l);
+}
+
+.align_start{
+    align-items: var(--start);
+}
+
+.align_center{
+    align-items: var(--center);
+}
+
+.align_end{
+    align-items: var(--end);
+}
+
+.display_none{
+    display: var(--none);
+}

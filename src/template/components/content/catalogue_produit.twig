@@ -1,0 +1,19 @@
+<div class='space_1 f_wrap gap20'>
+{% if contrat_name is empty %}
+  {% for c in contrats %}
+  <div class="col center">
+    <a href="{{ dir }}produit/{{ c.id }}"><img src='{{ dir }}public/assets/img/photos/{{ c.img }}' alt='photo'></a>
+    <h2>{{ c.titre }}</h2>
+  </div>
+  {% endfor %}
+{% else %}
+  <div class="center">
+    <div class="col">
+      {{ contrat_contenu|raw }}
+      <form  class="mrg5_t center"method="post">
+        <input type="submit" class="txt_size30 pad1_t pad1_l pad1_r pad1_b mrg5_b back_blue   txt_white btn_1" value="Souscrire à ce voyage">
+      </form>
+    </div>
+  </div>
+{% endif %}
+</div>
